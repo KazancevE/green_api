@@ -12,6 +12,8 @@ function SendMessageForm({onSubmit, userInfo}) {
         postMessage();
     };
 
+    // ааа ...вот пропустил это ...тут короче после каждого ввода клавиши текста происходит эта шляпа
+    // она записывает текст в value
     const inputChange = (event) => {
         setValue(event.target.value);
     };
