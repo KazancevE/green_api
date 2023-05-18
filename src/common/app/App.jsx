@@ -16,8 +16,7 @@ function App() {
 
     const [messages, setMessages] = useState([]);
 
-    const postMessage = async (e) => {
-        e.preventDefault();
+    const postMessage = async (value) => {
         // const dat = {
         //     sender: user,
         //     message: '',
@@ -28,7 +27,7 @@ function App() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({chatId: user, message:'ddd'})
+                body: JSON.stringify({chatId: user, message:value})
 
             });
         let data = await res.json();
@@ -51,7 +50,7 @@ function App() {
     };
 
     const onSubmitWatcher = (value) => {
-        console.log(value);
+        postMessage(value);
     };
 
 

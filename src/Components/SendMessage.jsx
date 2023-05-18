@@ -7,6 +7,7 @@ function SendMessageForm({onSubmit}) {
     const checkClick = (event) => {
         event.preventDefault();
         onSubmit(value);
+        setValue('');
     };
 
     const inputChange = (event) => {
