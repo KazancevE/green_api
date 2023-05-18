@@ -9,6 +9,10 @@ function SendMessageForm(props) {
         console.log('value', event.target.value);
     };
 
+    const inputChange = (event) => {
+        setValue(event.target.value);
+    };
+
     return (
         <form
             onSubmit={checkClick}
@@ -16,6 +20,7 @@ function SendMessageForm(props) {
             <input
                 name='send'
                 value={value}
+                onChange={inputChange}
                 placeholder="Введите сообщение"
                 type="text" />
             {/*<button >Отправить</button>*/}
