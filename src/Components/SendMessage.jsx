@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 
-function SendMessageForm(props) {
+function SendMessageForm({onSubmit}) {
 
     const [value, setValue] = useState('');
 
     const checkClick = (event) => {
         event.preventDefault();
         console.log('value', event.target.value);
+        onSubmit(event.target.value);
     };
 
     const inputChange = (event) => {
