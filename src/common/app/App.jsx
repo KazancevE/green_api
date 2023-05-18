@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import MessageList from "./Components/Message.js";
-import SendMessageForm from "./Components/SendMessage";
+import MessageList from "../../Components/Message";
+import SendMessageForm from "../../Components/SendMessage";
 // import {getMessage} from "@testing-library/jest-dom/dist/utils";
 // import message from "./Components/Message.js";
 // import {getMessage} from "@testing-library/jest-dom/dist/utils";
@@ -23,8 +23,8 @@ class App extends React.Component {
                     sender: user,
                     message: '',
                 }
-            ];
-        }
+            ]
+        };
         // const {items} = this.state;
         // this.getMessage = this.getMessage.bind(this);
     };
@@ -50,7 +50,7 @@ class App extends React.Component {
         console.log(await data);
         // return await data;
 
-    }
+    };
 
     // sender: result.senderData.senderName,
     // message: result.messageData.textMessageData.textMessage,
@@ -59,10 +59,10 @@ class App extends React.Component {
         // e.preventDefault();//убирает стандартное поведение формы
         const api_url = await fetch(`https://api.green-api.com/waInstance${idInstance}/ReceiveNotification/${apiTokenInstance}`)
         const data = api_url.json();
-        console.log(data)
+        console.log(data);
         this.state.items.push(data);
         return data;
-    }
+    };
 
   render() {
 
