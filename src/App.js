@@ -23,7 +23,7 @@ class App extends React.Component {
                     sender: user,
                     message: '',
                 }
-            ],
+            ];
         }
         // const {items} = this.state;
         // this.getMessage = this.getMessage.bind(this);
