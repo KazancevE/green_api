@@ -1,24 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 
+function SendMessageForm(props) {
 
+    const [value, setValue] = useState('');
 
-class SendMessageForm extends React.Component {
-    render() {
-        
-        return (
-            <form
-                onSubmit={this.props.messages}
-                className="send-message-form">
-                <input
-                    name='send'
-                    value={this.props.messages}
-                    placeholder="Введите сообщение"
-                    type="text" />
-                {/*<button >Отправить</button>*/}
-            </form>
+    const checkClick = (event) => {
+        event.preventDefault();
+        console.log('value', event.target.value);
+    };
 
-        )
-    }
+    return (
+        <form
+            onSubmit={checkClick}
+            className="send-message-form">
+            <input
+                name='send'
+                value={value}
+                placeholder="Введите сообщение"
+                type="text" />
+            {/*<button >Отправить</button>*/}
+        </form>
+
+    )
 }
+
+
 
 export default SendMessageForm;

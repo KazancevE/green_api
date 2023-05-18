@@ -73,7 +73,7 @@ class App extends React.Component {
           <div>
               {/*<Title />*/}
               <MessageList messages = {this.state.items} />
-              <SendMessageForm messages ={this.postMessage} />
+              <SendMessageForm />
           </div>
       )
   }
